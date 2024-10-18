@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+body{
+    background: url(https://images7.alphacoders.com/443/thumb-1920-443778.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, .1);
+        width: 100%;
+        height: inherit;
+        z-index: 0;
+    }
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 70vw;
+    z-index: 1;
+}
+
+
+h1{
+    width: fit-content;
+    padding: 20px;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, .9);
+}
+
+.cont-tamano, .cont-num-barcos{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    min-width: fit-content;
+    width: 75vw;
+    max-width: 900px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, .5);
+
+    background-color: rgba(255, 255, 255, .4);
+
+    p{
+        color: #000;
+    }
+}
+
+.cont-num-barcos{
+    display: none;
+}
+
+input[type="number"]{
+    width: 170px;
+    height: 30px;
+    padding-left: 10px;
+    margin: 10px auto;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+button{
+    cursor: pointer;
+    width: 170px;
+    height: 30px;
+    margin: 10px auto;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+
+/* Tablero */
+
+#tablero{
+    display: none;
+    grid-auto-flow: column;
+    width: fit-content;
+    border: 3px solid #000;
+}
+
+.casilla{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: #c9c9c9;
+    cursor: pointer;
+}
+
+#mensaje{
+    width: fit-content;
+    padding: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+#btn-rendirse, #btn-reiniciar{
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .contenedor{
+        height: 90vh;
+        width: 100vw;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+
+    input[type="number"]{
+        width: 170px;
+        height: 40px;
+        margin: 20px auto 10px auto;
+        font-size: 16px;
+    }
+
+    button{
+        width: 170px;
+        height: 40px;
+        margin: 20px auto;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .4), 
+        inset 4px 4px 5px rgba(255, 255, 255, .4);
+    }
+
+    #mensaje{
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+}

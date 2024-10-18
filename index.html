@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hundir la flota</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Hundir la flota</h1>
+
+      <div class="cont-tamano">
+        <p>Dime un tamaño para el tablero</p>
+        <p>Mínimo 3 y Máximo 8</p>
+        <input
+          type="number"
+          name="tamano"
+          id="tamano"
+          min="3"
+          max="8"
+          placeholder="Ej: 5"
+        />
+        <button id="btn-tamano">Enviar</button>
+      </div>
+
+      <div class="cont-num-barcos">
+        <p>Dime el número de barcos</p>
+        <p>Mínimo 1 y Máximo <span></span></p>
+        <input
+          type="number"
+          name="numBarcos"
+          id="numBarcos"
+          min="3"
+          max="12"
+          placeholder="Ej: 5"
+        />
+        <button id="btn-num-barcos">Enviar</button>
+      </div>
+
+
+
+      <!--Tablero-->
+      <div id="tablero"></div>
+
+      <!--Mensajes-->
+      <p id="mensaje"></p>
+
+      <button id="btn-rendirse">Rendirse</button>
+      <button id="btn-reiniciar">Reiniciar</button>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
